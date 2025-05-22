@@ -1,0 +1,291 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  line-height: 1.6;
+  direction: rtl;
+  background: linear-gradient(-45deg, #d0eaff, #a3cbff, #e4f1ff, #a8d1ff);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  color: #333;
+  overflow-x: hidden;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+nav {
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  border-bottom: 2px solid #ccc;
+  padding: 10px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; /* Allow wrapping on small screens */
+}
+nav strong {
+  color: white;
+  font-size: 1.2rem;
+}
+
+nav .nav-content a {
+  color: #222;
+  text-decoration: none;
+  margin-left: 15px;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+nav .nav-content a:hover {
+  color: #327ca1;
+}
+.main-content {
+  padding-top: 80px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Sections */
+.section {
+  padding: 60px 20px;
+  min-height: 100vh;
+  border-bottom: 1px solid #ddd;
+}
+#landing {
+  display: flex;
+  align-items: center;
+}
+.landing-parent-div {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  gap: 30px;
+}
+
+.icons-div {
+  display: flex;
+  margin-top: 60px;
+}
+.icons-div svg {
+  fill: #000000;
+}
+
+.icons-div a:hover svg {
+  fill: #327ca1;
+  transition: 0.5s;
+  width: 73px; /* Increased from 24px */
+  height: 73px; /* Increased from 24px */
+}
+.icons-div a {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 90px; /* Increased from 45px */
+  height: 90px; /* Increased from 45px */
+  border: 2px solid #327ca1;
+  border-radius: 50%;
+  color: #327ca1;
+  margin: 0px 8px;
+}
+.icons-div a:hover {
+  box-shadow: inset 0px 0px 10px #327ca1;
+  transition: all 0.5s;
+}
+.landing-parent-div img {
+  width: 40%;
+  height: 40%;
+  border-radius: 50%;
+  border: 2px solid #327ca1;
+  object-fit: cover;
+}
+.landing-parent-div h1 {
+  color: #222;
+  font-weight: 900;
+  margin-bottom: 20px;
+  font-size: 5rem;
+}
+.landing-parent-div p {
+  color: #222;
+  font-weight: 400;
+  font-size: 1.5rem;
+}
+#contact-section {
+  display: flex;
+  align-items: center;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Increased gap slightly for better spacing */
+  width: 40vw;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.05); /* Subtle background for the form */
+  padding: 25px; /* Add padding inside the form */
+  border-radius: 10px; /* Rounded corners for the form itself */
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+input,
+textarea {
+  /* Combined styles for input and textarea */
+  padding: 15px;
+  font-size: 1.1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.8);
+  color: #333; /* Ensure text is readable */
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #777; /* Lighter placeholder text */
+}
+
+textarea {
+  min-height: 150px; /* Adjusted height */
+  resize: vertical;
+}
+
+button[type="submit"] {
+  /* Be more specific for the submit button */
+  padding: 15px;
+  font-size: 1.1rem;
+  background-color: #327ca1;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-weight: bold;
+}
+
+button[type="submit"]:hover {
+  background-color: #275e7a;
+}
+
+#contact-section p {
+  color: #222;
+  font-weight: 400;
+  font-size: 1.6rem; /* Adjusted for consistency */
+  line-height: 1.7; /* Improved readability */
+  text-align: justify; /* Or 'right' if you prefer */
+  margin-left: 70px;
+  margin-right: 30px;
+}
+#contact-section h1 {
+  color: #222;
+  font-weight: 900;
+  font-size: 5rem;
+  margin-bottom: 100px;
+}
+/* File Upload Specific Styles */
+.file-upload {
+  display: flex;
+  flex-direction: column; /* Stack label and the rest */
+  gap: 10px; /* Space between label and the upload mechanism */
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.file-upload label {
+  font-weight: bold;
+  color: #333;
+  font-size: 1rem; /* Adjust as needed */
+  margin-bottom: 5px; /* Space below the label */
+}
+
+.file-upload-container {
+  display: flex; /* To align button and potentially other elements */
+  align-items: center;
+  gap: 10px; /* Space between button and file name list if it were next to it */
+}
+
+.file-input-wrapper {
+  position: relative; /* For absolute positioning of the actual input if needed, or just for structure */
+  display: inline-block; /* To make it wrap its content */
+}
+
+/* Make the actual file input invisible but still functional */
+#file-input {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 10; /* Make sure it's above the button text/icon */
+}
+
+.file-upload-btn {
+  display: inline-flex; /* Use inline-flex to align icon and text */
+  align-items: center;
+  padding: 10px 20px; /* Adjust padding */
+  font-size: 1rem; /* Adjust font size */
+  background-color: #5a9ac0; /* A slightly different shade or your main accent */
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-weight: normal; /* It's not a submit button */
+}
+
+.file-upload-btn svg {
+  margin-left: 8px; /* For RTL, this puts icon to the right of text. Use margin-right for LTR */
+  fill: white; /* Ensure SVG color matches text */
+}
+
+.file-upload-btn:hover {
+  background-color: #4a89b0; /* Darker shade on hover */
+}
+
+.selected-file {
+  margin-top: 10px; /* Space above the file list */
+  font-size: 0.9rem;
+  color: #555;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.03);
+  border-radius: 5px;
+  min-height: 20px; /* So it doesn't collapse when empty */
+  word-break: break-all; /* To prevent long file names from breaking layout */
+}
+
+/* Footer */
+footer {
+  background-color: #222;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  width: 100%;
+}
