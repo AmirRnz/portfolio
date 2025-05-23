@@ -12,19 +12,14 @@
   </head>
   <body>
     <!-- Navigation -->
-    <nav class="navbar">
+    <nav>
       <div class="nav-content">
-        <h1 class="logo">رزومه من</h1>
-        <ul class="nav-menu">
-          <li><a href="#" class="nav-link active" data-page="1">خانه</a></li>
-          <li><a href="#" class="nav-link" data-page="2">درباره من</a></li>
-          <li><a href="#" class="nav-link">مهارت های من</a></li>
-          <li><a href="#" class="nav-link">تماس</a></li>
-        </ul>
-        <div class="hamburger">
-          <span></span>
-          <span></span>
-          <span></span>
+        <h1>رزومه من</h1>
+
+        <div class="nav-links">
+          <a href="#">خانه</a>
+          <a href="#">درباره من</a>
+          <a href="#">ارتباط با من</a>
         </div>
       </div>
     </nav>
@@ -102,13 +97,13 @@
               </div>
             </div>
             <div class="hero-image">
-              <img src="image.png" alt="تصویر پروفایل" />
+              <img src="image.png" alt="تصویر اصلی" />
             </div>
           </section>
 
-          <!-- Features Section -->
-          <section class="features">
-            <div class="features-grid">
+          <!-- contact Section -->
+          <section class="contact">
+            <div class="contact-grid">
               <div id="contact-text-container">
                 <h1>ارتباط با من</h1>
                 <p>
@@ -118,7 +113,7 @@
                 </p>
                 <p>منتظرتون هستم :)</p>
               </div>
-              <div>
+              <div class="email-grid">
                 <h2>ارسال درخواست</h2>
                 <form method="POST" enctype="multipart/form-data">
                   <input type="text" placeholder="نام شما" />
@@ -156,6 +151,9 @@
         </div>
       </div>
     </main>
+    <footer>
+      <p>رزومه من - سیده محدثه ناصح</p>
+    </footer>
   </body>
   <script>
     document.addEventListener("DOMContentLoaded", function () {
