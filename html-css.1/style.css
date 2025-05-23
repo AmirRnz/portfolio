@@ -78,12 +78,12 @@ a {
   animation: show-content 1.5s linear forwards;
 }
 .home-info h1 {
-  font-size: 60px;
+  font-size: 5rem;
   font-weight: 700;
 }
 .home-info h2 {
   display: inline-block;
-  font-size: 32px;
+  font-size: 3rem;
   margin-top: -10px;
 }
 .home-info h2 span {
@@ -121,7 +121,8 @@ a {
   }
 }
 .home-info p {
-  font-size: 16px;
+  font-size: 1.1rem;
+  font-weight: 400;
   margin: 10px 0 25px;
 }
 .home-info .btn-sci {
